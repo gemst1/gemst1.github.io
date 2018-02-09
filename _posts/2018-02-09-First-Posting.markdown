@@ -31,3 +31,6 @@ permalink: /:title
 심플한 블로그를 빠르게 만들기 위해 imyeonn님의 블로그 [깃허브 블로그 만들기 (3) 성공](https://imyeonn.github.io/blog/blog/3/)을 참고로 Gtihub Blog를 만들었다.
 
 일단 만들기는 했는데 Chrome창 Tab에 나오는 저분의 이미지를 어떻게 바꿔야될지 모르겠다. 굉장히 거슬리지만 오늘은 이 정도로 만족하는걸로
+---
+이것저것 repository를 뒤져본 결과 거슬리는 저 이미지가 Favicon이라고 한다는 것을 알아냈다.
+자세한 수정법은 다음 포스팅에서...
