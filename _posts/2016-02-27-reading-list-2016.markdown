@@ -1,7 +1,12 @@
 ---
 title: "First Posting"
 layout: post
-tag: github, blog, posting, tag, test
+tag:
+-github
+-blog
+-posting
+-tag
+-test
 img: indigo/indigo.png
 blog: true
 author: gemst1
