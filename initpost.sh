@@ -33,7 +33,7 @@ POST_TITLE="${@:2:$(($#-1))}"
 POST_NAME="$(echo ${@:2:$(($#-1))} | sed -e 's/ /-/g' | sed "y/ABCDEFGHIJKLMNOPQRSTUVWXYZ/abcdefghijklmnopqrstuvwxyz/")"
 CURRENT_DATE="$(date +'%Y-%m-%d')"
 TIME=$(date +"%H:%M")
-FILE_NAME="${CURRENT_DATE}-${POST_NAME}.markdown"
+FILE_NAME="${CURRENT_DATE}-${POST_NAME}.md"
 # ----------------------------------------------------------------
 
 
