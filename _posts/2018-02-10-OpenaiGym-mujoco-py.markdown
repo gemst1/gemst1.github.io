@@ -72,18 +72,17 @@ class HandEnv(mujoco_env.MujocoEnv, utils.EzPickle):
 After building the environment python file, we need to register this environment to the gym. First, to regist to the gym, we need to regist the environment to mujoco_env by modifying '~your path to/gym/gym/envs/mujoco/__ init__.py'
 Add your environment end of the '__ init__.py' as below.
 
-{% highlight python %}
+```python
 from gym.envs.mujoco.hand import HandEnv
-{% endhighlight %}
+```
 
 #### 4. Regist Environment to the gym
 Finally, we can regist our environment to the gym framework. To do that, we need to modify file '~your path to/gym/gym/envs/__ init__.py'. Open the file then you can find Mujoco section. At the end of the Mujoco section add some lines as below to regist your environment.
 
-{% highlight python %}
+```python
 register(
     id='hand-v0',
     entry_point='gym.envs.mujoco:HandEnv',
     max_episode_steps=1000,
 )
-{% endhighlight %}
-
+```
