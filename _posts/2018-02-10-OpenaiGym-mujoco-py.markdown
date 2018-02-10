@@ -108,3 +108,8 @@ If you made mujoco model and registered to gym environment properly as explained
 
 ![pic1](https://github.com/gemst1/gemst1.github.io/blob/master/assets/images/openai-gym-mujoco-py.png?raw=true)
 <figcaption class="caption">OpenAI gym with mujoco-py</figcaption>
+
+<p align="center">
+  <img src="https://github.com/gemst1/gemst1.github.io/blob/master/assets/images/openai-gym-mujoco-py.png?raw=true" alt="OpenAI gym with mujoco-py"/>
+</p>
+
