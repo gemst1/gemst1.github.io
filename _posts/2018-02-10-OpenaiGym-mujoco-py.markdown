@@ -12,7 +12,7 @@ summary: "Github Jekyll blog posting test"
 permalink: /:title
 ---
 
-### Development Environment
+### Development Environments
 - Ubuntu 16.04
 - [Mujoco 150 linux](https://mujoco.org)
 - [Mujoco-py 1.50.1.35](https://github.com/openai/mujoco-py)
