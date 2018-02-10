@@ -106,6 +106,8 @@ for i in range(1000):
 
 If you made mujoco model and registered to gym environment properly as explained above, your environment works well and you can see simulation window like this.
 
+test
+
 ![pic1](https://github.com/gemst1/gemst1.github.io/blob/master/assets/images/openai-gym-mujoco-py.png?raw=true){: .center-image }
 <figcaption class="caption">OpenAI gym with mujoco-py</figcaption>
 
