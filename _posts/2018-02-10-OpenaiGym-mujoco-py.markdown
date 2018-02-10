@@ -26,12 +26,12 @@ I made 'hand_angle.xml' model to simulate.
 
 #### 2. Build gym environment
 After making the model, we can build gym environment to simulate the mujoco model in openai gym framework.
-1. Put the model ('hand_angle.xml') to '~your path to /gym/gym/envs/mujoco/assets'
-2. Make a new environment python file ('yourenvname.py') in '~ your path to /gym/gym/envs/mujoco'. In my case, 'hand.py'.
+1. Put the model (`hand_angle.xml`) to `~your path to /gym/gym/envs/mujoco/assets`
+2. Make a new environment python file ('yourenvname.py') in `~ your path to /gym/gym/envs/mujoco`. In my case, `hand.py`.
 I refer to the pre existing files given by gym framework. They provide some examples kind of 'ant.py', 'half_cheetah.py' etc. for newbies like me.
 The envirionment python file is composed as below.
 
-**Notice**: from the mujoco-py 1.50 we need to use step(self, action) rather than _ step(self, action)
+**Notice**: from the mujoco-py 1.50 we need to use `step(self, action)` rather than `_step(self, action)`
 
 ```python
 import numpy as np
@@ -69,15 +69,15 @@ class HandEnv(mujoco_env.MujocoEnv, utils.EzPickle):
 ```
 
 #### 3. Regist Environment to mujoco_env in the gym
-After building the environment python file, we need to register this environment to the gym. First, to regist to the gym, we need to regist the environment to mujoco_env by modifying '~your path to/gym/gym/envs/mujoco/__ init__.py'
-Add your environment end of the '__ init__.py' as below.
+After building the environment python file, we need to register this environment to the gym. First, to regist to the gym, we need to regist the environment to mujoco_env by modifying `~your path to/gym/gym/envs/mujoco/__ init__.py`
+Add your environment end of the `__init__.py` as below.
 
 ```python
 from gym.envs.mujoco.hand import HandEnv
 ```
 
 #### 4. Regist Environment to the gym
-Finally, we can regist our environment to the gym framework. To do that, we need to modify file '~your path to/gym/gym/envs/__ init__.py'. Open the file then you can find Mujoco section. At the end of the Mujoco section add some lines as below to regist your environment.
+Finally, we can regist our environment to the gym framework. To do that, we need to modify file `~your path to/gym/gym/envs/__ init__.py`. Open the file then you can find Mujoco section. At the end of the Mujoco section add some lines as below to regist your environment.
 
 ```python
 register(
