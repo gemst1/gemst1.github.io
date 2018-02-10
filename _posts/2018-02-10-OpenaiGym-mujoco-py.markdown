@@ -31,7 +31,7 @@ After making the model, we can build gym environment to simulate the mujoco mode
 I refer to the pre existing files given by gym framework. They provide some examples kind of 'ant.py', 'half_cheetah.py' etc. for newbies like me.
 The envirionment python file is composed as below.
 
-{% hightlight python %}
+{% highlight python %}
 import numpy as np
 from gym import utils
 from gym import spaces
