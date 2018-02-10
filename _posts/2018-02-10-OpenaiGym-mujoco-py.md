@@ -2,11 +2,9 @@
 title: "OpenAI gym with Mujoco-py 1"
 layout: post
 tag:
-- github
-- blog
-- posting
-- tag
-- test
+- Ubuntu
+- OpenAI Gym
+- MuJoCo-py
 img: indigo/indigo.png
 blog: false
 author: gemst1
@@ -14,7 +12,7 @@ summary: "Github Jekyll blog posting test"
 permalink: /:title
 ---
 
-### Environment
+### Development Environment
 - Ubuntu 16.04
 - [Mujoco 150 linux](https://mujoco.org)
 - [Mujoco-py 1.50.1.35](https://github.com/openai/mujoco-py)
@@ -33,7 +31,7 @@ After making the model, we can build gym environment to simulate the mujoco mode
 I refer to the pre existing files given by gym framework. They provide some examples kind of 'ant.py', 'half_cheetah.py' etc. for newbies like me.
 The envirionment python file is composed as below.
 
-{% highlight yml %}
+{% highlight python %}
 import numpy as np
 from gym import utils
 from gym import spaces
@@ -70,3 +68,23 @@ class HandEnv(mujoco_env.MujocoEnv, utils.EzPickle):
         self.viewer.cam.distance = self.model.stat.extent * 1.8
         self.viewer.cam.elevation = -20
 {% endhighlight %}
+
+#### 3. Regist Environment to mujoco_env in the gym
+After building the environment python file, we need to register this environment to the gym. First, to regist to the gym, we need to regist the environment to mujoco_env by modifying '~your path to/gym/gym/envs/mujoco/__ init__.py'
+Add your environment end of the '__ init__.py' as below.
+
+{% highlight python %}
+from gym.envs.mujoco.hand import HandEnv
+{% endhighlight %}
+
+#### 4. Regist Environment to the gym
+Finally, we can regist our environment to the gym framework. To do that, we need to modify file '~your path to/gym/gym/envs/__ init__.py'. Open the file then you can find Mujoco section. At the end of the Mujoco section add some lines as below to regist your environment.
+
+{% highlight python %}
+register(
+    id='hand-v0',
+    entry_point='gym.envs.mujoco:HumanoidStandupEnv',
+    max_episode_steps=1000,
+)
+{% endhighlight %}
+
