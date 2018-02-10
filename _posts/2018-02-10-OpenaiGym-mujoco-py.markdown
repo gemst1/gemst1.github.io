@@ -31,7 +31,7 @@ After making the model, we can build gym environment to simulate the mujoco mode
 I refer to the pre existing files given by gym framework. They provide some examples kind of 'ant.py', 'half_cheetah.py' etc. for newbies like me.
 The envirionment python file is composed as below.
 
-{% highlight python %}
+'''python
 import numpy as np
 from gym import utils
 from gym import spaces
@@ -67,7 +67,7 @@ class HandEnv(mujoco_env.MujocoEnv, utils.EzPickle):
         self.viewer.cam.trackbodyid = 2
         self.viewer.cam.distance = self.model.stat.extent * 1.8
         self.viewer.cam.elevation = -20
-{% endhighlight %}
+'''
 
 #### 3. Regist Environment to mujoco_env in the gym
 After building the environment python file, we need to register this environment to the gym. First, to regist to the gym, we need to regist the environment to mujoco_env by modifying '~your path to/gym/gym/envs/mujoco/__ init__.py'
