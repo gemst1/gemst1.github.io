@@ -41,20 +41,17 @@ class HandEnv(mujoco_env.MujocoEnv, utils.EzPickle):
     def __init__(self):
         mujoco_env.MujocoEnv.__init__(self, 'hand_angle.xml', 5)
         utils.EzPickle.__init__(self)
-        low = np.array([0, 0, 0, 0])
-        high = np.array([0.05, 0.05, 0.04, 0.065])
-        est_high = np.array([0.3, 0.3, 1.5, 1.5])
 
-    def _step(self, action):
+    def step(self, action):
         self.do_simulation(action, self.frame_skip)
         ob = self._get_obs()
-        done = None
         reward = 0
+        done = None
         return ob, reward, done, {}
 
     def _get_obs(self):
         return np.concatenate([
-            self.model.data.qpos.flat[4:8]
+            self.sim.data.qpos.flat[4:8]
         ])
 
     def reset_model(self):
