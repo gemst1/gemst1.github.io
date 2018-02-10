@@ -83,7 +83,7 @@ Finally, we can regist our environment to the gym framework. To do that, we need
 {% highlight python %}
 register(
     id='hand-v0',
-    entry_point='gym.envs.mujoco:HumanoidStandupEnv',
+    entry_point='gym.envs.mujoco:HandEnv',
     max_episode_steps=1000,
 )
 {% endhighlight %}
