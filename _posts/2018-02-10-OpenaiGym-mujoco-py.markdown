@@ -86,3 +86,24 @@ register(
     max_episode_steps=1000,
 )
 ```
+
+#### 5. Test the environment
+You can test your environment using this simple code.
+
+```python3
+import gym
+
+env = gym.make('hand-v0')
+env.reset()
+
+for i in range(1000):
+    env.render()
+    action = [0, 0, 0, 0]
+    state, reward, done, info = env.step(action)
+    print(state)
+```
+
+If you made mujoco model and registered to gym environment properly as explained above, your environment works well and you can see simulation window like this.
+
+![pic1](/assets/images/oepnai-gym-mujoco-py.png)
+<figcaption class="caption">OpenAI gym with mujoco-py</figcaption>
