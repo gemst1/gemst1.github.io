@@ -32,6 +32,7 @@ After making the model, we can build gym environment to simulate the mujoco mode
 2. Make a new environment python file ('yourenvname.py') in '~ your path to /gym/gym/envs/mujoco'. In my case, 'hand.py'.
 I refer to the pre existing files given by gym framework. They provide some examples kind of 'ant.py', 'half_cheetah.py' etc. for newbies like me.
 The envirionment python file is composed as below.
+
 {% highlight yml %}
 import numpy as np
 from gym import utils
