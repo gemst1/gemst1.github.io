@@ -6,7 +6,7 @@ tag:
 - OpenAI Gym
 - MuJoCo-py
 img: indigo/indigo.png
-blog: false
+blog: true
 author: gemst1
 summary: "Github Jekyll blog posting test"
 permalink: /:title
