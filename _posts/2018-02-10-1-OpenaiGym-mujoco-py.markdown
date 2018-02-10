@@ -91,7 +91,7 @@ register(
 #### 5. Test the environment
 You can test your environment using this simple code.
 
-```python3
+```python
 import gym
 
 env = gym.make('hand-v0')
