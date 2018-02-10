@@ -5,6 +5,7 @@ tag:
 - Ubuntu
 - OpenAI Gym
 - MuJoCo-py
+- Environment
 img: indigo/indigo.png
 blog: true
 author: gemst1
