@@ -57,4 +57,4 @@ DEFAULT_TENSOR_SIZE_GUIDANCE = {
 }
 ```
 
-After chaning the value `1000` to `0`, rerun the TensorFlow and then you can get full data log of your learning process following the step 2.
+After chaning the value `1000` to `0`, rerun the TensorFlow and then you can get full data log of your learning process by following the step 2.
