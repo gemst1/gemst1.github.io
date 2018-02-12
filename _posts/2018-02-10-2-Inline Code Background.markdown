@@ -31,7 +31,7 @@ $codebackground: #94d8e8
 ### Change property of code block
 We can modify the property at `_sass/base/general.sass`. We can find code about the property as seen below. Here, tt section is a property of the inline code block and pre section is a property of multiline code block. You can change both of them as your style.
 
-**Notice**: You should put `code` and `		background: #fff` to change only inline code block
+**Notice**: You should put `code` and `background: #fff` to change only inline code block
 
 ```sass
 code,
